@@ -1,5 +1,5 @@
 {
-  "name": "quotes",
+  "name": "meal-tracker",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
