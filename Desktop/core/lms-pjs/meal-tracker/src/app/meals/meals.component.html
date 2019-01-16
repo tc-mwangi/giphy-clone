@@ -1,0 +1,59 @@
+<!-- Interpolation (One-way binding) -->
+
+
+
+<!-- Refactored to accept inputs -->
+
+
+<!-- <h2>My Meals</h2>
+
+<ul class='heroes'>
+    <li *ngFor= 'let meal of meals' [class.selected]='hero === selectedMeal' (click) ='onSelect(meal)'>
+      <span class='badge'>{{ meal.id }}</span>
+      {{ meal.calories }}
+    </li>
+  </ul>
+
+
+<div *ngIf='selectedHero'>
+
+    <h2>{{ selectedMeal.name | uppercase }} Details</h2>
+    <div><span>id: </span>{{ selectedMeal.id }}</div>
+    <div><span>calories: </span>{{ meal.calories }} cal</div> 
+
+    <div>
+        <label for="name"> Name:
+          <input class='form-control' type="text" [(ngModel)]='selectedMeal.name' placeholder='name'>
+        </label>
+      </div>
+
+<div> -->
+
+
+
+<!-- above 
+<li> is the host element
+  - meals is the list from the MealsComponent class.
+  - meal holds the current meal object for each iteration through the list. -->
+
+
+  <h2>My Meals</h2>
+  <ul class="meals">
+    <li *ngFor="let meal of meals"
+      [class.selected]="meal === selectedMeal"
+      (click)="onSelect(meal)">
+      <span class="badge">{{meal.id}}</span> {{meal.name}}
+    </li>
+  </ul>
+  
+  <div *ngIf="selectedMeal">
+  
+    <h2>{{selectedMeal.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedMeal.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedMeal.name" placeholder="name">
+      </label>
+    </div>
+  
+  </div>
